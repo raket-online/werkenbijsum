@@ -70,11 +70,14 @@
 </header>
 
     <section class="relative overflow-hidden py-20 lg:py-32">
-  <!-- Schilderij achtergrond met overlay -->
+  <!-- Schilderij achtergrond met donkere overlay -->
   <div class="absolute inset-0">
     <img src="images/schilderij-close-up-1920x706px.jpg" alt="" class="w-full h-full object-cover">
-    <div class="absolute inset-0 bg-gradient-to-br from-[var(--primary)]/95 via-[var(--secondary)]/90 to-[var(--primary)]/95"></div>
-    <div class="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]"></div>
+    <!-- Donkere basislaag voor contrast -->
+    <div class="absolute inset-0 bg-gradient-to-br from-gray-900/85 via-gray-800/80 to-gray-900/85"></div>
+    <!-- Kleuraccent overlay voor branding -->
+    <div class="absolute inset-0 bg-gradient-to-br from-[var(--primary)]/40 via-transparent to-[var(--secondary)]/40 mix-blend-multiply"></div>
+    <div class="absolute inset-0 bg-grid-white/[0.03] bg-[size:20px_20px]"></div>
   </div>
   <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="grid items-center gap-12 lg:grid-cols-2">
@@ -504,8 +507,11 @@
   <!-- Team overleg parallax achtergrond -->
   <div class="absolute inset-0">
     <img src="images/DSC07674-3-team-overleg-staand-2048x942px.jpg" alt="" class="w-full h-full object-cover parallax-bg">
-    <div class="absolute inset-0 bg-gradient-to-br from-[var(--primary)]/92 via-[var(--secondary)]/88 to-[var(--primary)]/92"></div>
-    <div class="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]"></div>
+    <!-- Donkere basislaag voor contrast -->
+    <div class="absolute inset-0 bg-gradient-to-br from-gray-900/75 via-gray-800/70 to-gray-900/75"></div>
+    <!-- Brand kleur accenten -->
+    <div class="absolute inset-0 bg-gradient-to-br from-[var(--primary)]/50 via-[var(--secondary)]/40 to-[var(--primary)]/50 mix-blend-multiply"></div>
+    <div class="absolute inset-0 bg-grid-white/[0.04] bg-[size:20px_20px]"></div>
   </div>
   <div class="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
     <div class="mb-8 inline-flex h-20 w-20 items-center justify-center rounded-full bg-white/20 text-4xl shadow-xl">
