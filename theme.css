@@ -1,0 +1,14 @@
+
+:root {--primary: #e5318a;
+    --secondary: #6b5b95;
+    --accent: #f2c7df;
+    --text: #1f2937;
+    --background: #d4d1e1;
+    }
+    body { background-color: var(--background); color: var(--text); }
+    .bg-primary { background-color: var(--primary); } .text-primary { color: var(--primary); } .border-primary { border-color: var(--primary); }
+    .bg-secondary { background-color: var(--secondary); } .text-secondary { color: var(--secondary); } .border-secondary { border-color: var(--secondary); }
+    .bg-accent { background-color: var(--accent); } .text-accent { color: var(--accent); } .border-accent { border-color: var(--accent); }
+    a { color: var(--primary); }
+    a:hover { opacity: 0.8; }
+    
