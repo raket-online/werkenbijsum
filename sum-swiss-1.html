@@ -12,6 +12,27 @@
             font-family: 'Inter', sans-serif;
         }
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        /* Parallax effect voor achtergronden */
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Smooth scrolling voor anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Improved FAQ chevron animation */
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
     </style>
 </head>
 <body class="bg-gray-100">
@@ -48,8 +69,13 @@
     </div>
 </header>
 
-    <section class="relative overflow-hidden bg-gradient-to-br from-[var(--primary)] to-[var(--secondary)] py-20 lg:py-32">
-  <div class="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]"></div>
+    <section class="relative overflow-hidden py-20 lg:py-32">
+  <!-- Schilderij achtergrond met overlay -->
+  <div class="absolute inset-0">
+    <img src="images/schilderij-close-up-1920x706px.jpg" alt="" class="w-full h-full object-cover">
+    <div class="absolute inset-0 bg-gradient-to-br from-[var(--primary)]/95 via-[var(--secondary)]/90 to-[var(--primary)]/95"></div>
+    <div class="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]"></div>
+  </div>
   <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="grid items-center gap-12 lg:grid-cols-2">
       <div class="space-y-8">
@@ -89,8 +115,12 @@
   </div>
 </section>
 
-<section id="missie" class="py-20 bg-white">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<section id="missie" class="py-20 bg-white relative overflow-hidden">
+  <!-- Subtiele team achtergrond -->
+  <div class="absolute inset-0 opacity-5">
+    <img src="images/DSC07791-antoinette-legt-uit-aan-team-2048x1365px.jpg" alt="" class="w-full h-full object-cover">
+  </div>
+  <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="mx-auto max-w-3xl text-center mb-16">
       <h2 class="text-4xl font-extrabold text-[var(--text)] sm:text-5xl mb-6">
         Onze Missie: <span class="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)]">Werken met een Hoger Doel</span>
@@ -144,9 +174,14 @@
   </div>
 </section>
 
-<section class="py-20 bg-gray-50">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="mb-12 flex flex-col items-start gap-6 md:flex-row md:items-end">
+<section class="py-20 bg-gray-50 relative overflow-hidden">
+  <!-- Antoinette cijfers banner strip -->
+  <div class="absolute top-0 left-0 right-0 h-24 overflow-hidden">
+    <img src="images/DSC07760-antoinette-voor-scherm-met-cijfers-2048x102px.jpg" alt="" class="w-full h-full object-cover opacity-20 blur-sm">
+    <div class="absolute inset-0 bg-gradient-to-b from-gray-50 to-transparent"></div>
+  </div>
+  <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="mb-12 flex flex-col items-start gap-6 md:flex-row md:items-end pt-8">
       <h2 class="text-4xl font-extrabold text-[var(--text)] sm:text-5xl">
         Jouw Rol
       </h2>
@@ -340,8 +375,13 @@
   </div>
 </section>
 
-<section class="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<section class="py-20 relative overflow-hidden">
+  <!-- Koffie moment achtergrond met overlay -->
+  <div class="absolute inset-0">
+    <img src="images/DSC07699-twee-medewerkers-drinken-samen-koffie-focus-op-handen-en-koffiekopjes-2048x521px.jpg" alt="" class="w-full h-full object-cover">
+    <div class="absolute inset-0 bg-gradient-to-br from-gray-50/95 via-gray-100/90 to-gray-50/95"></div>
+  </div>
+  <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="grid gap-12 lg:grid-cols-2">
       <div>
         <h2 class="text-4xl font-extrabold text-[var(--text)] sm:text-5xl mb-8">Onze Cultuur: <br/>Veiligheid en Vertrouwen</h2>
@@ -460,8 +500,13 @@
   </div>
 </section>
 
-<section id="contact" class="py-20 bg-gradient-to-br from-[var(--primary)] to-[var(--secondary)] text-white relative overflow-hidden">
-  <div class="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]"></div>
+<section id="contact" class="py-20 relative overflow-hidden text-white">
+  <!-- Team overleg parallax achtergrond -->
+  <div class="absolute inset-0">
+    <img src="images/DSC07674-3-team-overleg-staand-2048x942px.jpg" alt="" class="w-full h-full object-cover parallax-bg">
+    <div class="absolute inset-0 bg-gradient-to-br from-[var(--primary)]/92 via-[var(--secondary)]/88 to-[var(--primary)]/92"></div>
+    <div class="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]"></div>
+  </div>
   <div class="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
     <div class="mb-8 inline-flex h-20 w-20 items-center justify-center rounded-full bg-white/20 text-4xl shadow-xl">
       ☕
