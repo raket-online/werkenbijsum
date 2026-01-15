@@ -33,25 +33,181 @@
         details > summary::-webkit-details-marker {
             display: none;
         }
+
+        /* Header Styles */
+        .main-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .main-header.scrolled {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .nav-link {
+            position: relative;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 2px;
+            background: var(--text);
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+
+        @media (max-width: 768px) {
+            .desktop-nav {
+                display: none;
+            }
+            .hamburger {
+                display: flex;
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-100">
-    <header class="bg-gray-100 text-gray-800 p-4 shadow-md">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-        <a href="/" class="text-2xl font-bold">
-            WERKEN BIJ <img src="logo-black.svg" alt="SUM accountants" class="h-8 inline-block mr-2">
-        </a>
-        <nav>
-            <ul class="flex space-x-4">
-                        <li><a href="#missie" class="hover:text-[var(--primary)] transition-colors">Missie</a></li>
-                        <li><a href="#rol" class="hover:text-[var(--primary)] transition-colors">Jouw rol</a></li>
-                        <li><a href="#match" class="hover:text-[var(--primary)] transition-colors">De match</a></li>
-                        <li><a href="#voordelen" class="hover:text-[var(--primary)] transition-colors">Ons aanbod</a></li>
-                        <li><a href="#contact" class="hover:text-[var(--primary)] transition-colors">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+    <!-- Header -->
+    <header class="main-header" id="main-header">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="/" class="flex items-end gap-3 group">
+                    <span class="font-bold text-[30px] leading-[47px] text-gray-900 transition-colors">WERKEN BIJ</span>
+                    <img src="logo-black.svg" alt="SUM accountants" class="h-9 inline-block transition-transform group-hover:scale-105">
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="desktop-nav hidden md:block">
+                    <ul class="flex items-center gap-8">
+                        <li><a href="#missie" class="nav-link text-gray-700 font-bold">MISSIE</a></li>
+                        <li><a href="#rol" class="nav-link text-gray-700 font-bold">JOUW ROL</a></li>
+                        <li><a href="#match" class="nav-link text-gray-700 font-bold">DE MATCH</a></li>
+                        <li><a href="#voordelen" class="nav-link text-gray-700 font-bold">ONS AANBOD</a></li>
+                        <li><a href="#contact" class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-bold text-white bg-[var(--primary)] rounded-full hover:bg-[var(--secondary)] transition-all hover:shadow-lg hover:scale-105">Kennis Maken</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Mobile Hamburger -->
+                <div class="hamburger" id="hamburger" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <nav class="mobile-menu" id="mobile-menu">
+                <ul class="flex flex-col gap-4">
+                    <li><a href="#missie" class="block py-2 text-gray-700 font-bold hover:text-[var(--primary)] transition-colors" onclick="closeMobileMenu()">MISSIE</a></li>
+                    <li><a href="#rol" class="block py-2 text-gray-700 font-bold hover:text-[var(--primary)] transition-colors" onclick="closeMobileMenu()">JOUW ROL</a></li>
+                    <li><a href="#match" class="block py-2 text-gray-700 font-bold hover:text-[var(--primary)] transition-colors" onclick="closeMobileMenu()">DE MATCH</a></li>
+                    <li><a href="#voordelen" class="block py-2 text-gray-700 font-bold hover:text-[var(--primary)] transition-colors" onclick="closeMobileMenu()">ONS AANBOD</a></li>
+                    <li><a href="#contact" class="block w-full text-center py-3 text-white font-bold bg-[var(--primary)] rounded-full hover:bg-[var(--secondary)] transition-colors" onclick="closeMobileMenu()">Kennis Maken</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 10) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const hamburger = document.getElementById('hamburger');
+            const mobileMenu = document.getElementById('mobile-menu');
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        }
+
+        function closeMobileMenu() {
+            const hamburger = document.getElementById('hamburger');
+            const mobileMenu = document.getElementById('mobile-menu');
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const header = document.getElementById('main-header');
+            const hamburger = document.getElementById('hamburger');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (!header.contains(event.target) && mobileMenu.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        });
+    </script>
 
     <section class="relative overflow-hidden py-20 lg:py-32">
   <!-- Schilderij achtergrond met donkere overlay -->
