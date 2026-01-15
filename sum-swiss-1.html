@@ -102,11 +102,11 @@
       </div>
       <div class="hidden lg:block">
         <div class="relative rounded-2xl bg-white/10 p-8 backdrop-blur-md border border-white/20">
-          <blockquote class="text-2xl font-medium text-white italic leading-relaxed">
+          <blockquote class="text-2xl font-medium text-[var(--primary)] italic leading-relaxed">
             "Toen ik in 2015 begon, was ik de eerste aanwinst van het kantoor. Ik heb de groei van dichtbij meegemaakt en ervaar nog elke dag de fijne, persoonlijke sfeer."
           </blockquote>
           <footer class="mt-8 flex items-center gap-4">
-            <div class="h-12 w-12 rounded-full bg-white/20 flex items-center justify-center text-white font-bold text-lg">J</div>
+            <img src="images/jefta.jpg" alt="Jefta" class="h-12 w-12 rounded-full object-cover border-2 border-white/30">
             <div class="text-white">
               <cite class="not-italic font-bold text-lg">Jefta</cite>
               <p class="text-white/80 text-sm">Assistent-accountant</p>
@@ -235,12 +235,26 @@
               <span class="text-gray-700 text-base leading-relaxed">Klaar rond 17:00 uur - overwerken komt bijna niet voor</span>
             </li>
           </ul>
-          <blockquote class="mt-8 border-t border-gray-100 pt-8">
-            <p class="text-lg text-gray-600 italic mb-4">"Ik vind het belangrijk dat mijn personeel niet overbelast raakt door de hoeveelheid werk. Deadlines zijn er, maar we verdelen het werk zo dat de werkdruk voor iedereen gezond blijft."</p>
-            <footer class="font-bold text-[var(--primary)]">Antoinette, Oprichter</footer>
-          </blockquote>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- Antoinette Quote Sectie -->
+<section class="py-16 bg-white">
+  <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+    <div class="rounded-2xl bg-gradient-to-br from-[var(--primary)]/5 to-[var(--secondary)]/5 p-10 border-l-4 border-[var(--primary)]">
+      <blockquote class="text-2xl font-medium text-gray-700 italic leading-relaxed mb-6">
+        "Ik vind het belangrijk dat mijn personeel niet overbelast raakt door de hoeveelheid werk. Deadlines zijn er, maar we verdelen het werk zo dat de werkdruk voor iedereen gezond blijft."
+      </blockquote>
+      <footer class="flex items-center gap-4">
+        <div class="h-14 w-14 rounded-full bg-[var(--primary)] flex items-center justify-center text-white font-bold text-xl">A</div>
+        <div>
+          <cite class="not-italic font-bold text-xl text-[var(--primary)]">Antoinette</cite>
+          <p class="text-gray-600">Oprichter</p>
+        </div>
+      </footer>
     </div>
   </div>
 </section>
@@ -352,25 +366,43 @@
 
     <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
       <div class="rounded-xl border-2 border-dashed border-gray-200 bg-gray-50 p-8 transition-all hover:border-[var(--primary)] hover:bg-white hover:shadow-lg">
-        <div class="mb-4 text-4xl">🎓</div>
+        <div class="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-[var(--primary)] text-white shadow-lg">
+          <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+          </svg>
+        </div>
         <h3 class="mb-3 text-xl font-bold text-[var(--text)]">Groei en Opleiding</h3>
         <p class="text-gray-600 leading-relaxed">Er is volop ruimte voor bijscholing, van praktijkdiploma's loonadministratie tot verdiepende niveaus; wij faciliteren je leertraject via een opleidingsbudget.</p>
       </div>
 
       <div class="rounded-xl border-2 border-dashed border-gray-200 bg-gray-50 p-8 transition-all hover:border-[var(--primary)] hover:bg-white hover:shadow-lg">
-        <div class="mb-4 text-4xl">⏰</div>
+        <div class="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-[var(--secondary)] text-white shadow-lg">
+          <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
         <h3 class="mb-3 text-xl font-bold text-[var(--text)]">Flexibiliteit</h3>
         <p class="text-gray-600 leading-relaxed">We bieden een vrije inloop in de ochtend en de mogelijkheid om uren in overleg aan te passen.</p>
       </div>
 
       <div class="rounded-xl border-2 border-dashed border-gray-200 bg-gray-50 p-8 transition-all hover:border-[var(--primary)] hover:bg-white hover:shadow-lg">
-        <div class="mb-4 text-4xl">🚀</div>
+        <div class="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-[var(--accent)] text-white shadow-lg">
+          <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </div>
         <h3 class="mb-3 text-xl font-bold text-[var(--text)]">Toekomstgericht</h3>
         <p class="text-gray-600 leading-relaxed">We kijken samen naar de kansen die AI biedt om boekhoudkundige handelingen te automatiseren, zodat er meer ruimte komt voor denkwerk.</p>
       </div>
 
       <div class="rounded-xl border-2 border-dashed border-gray-200 bg-gray-50 p-8 transition-all hover:border-[var(--primary)] hover:bg-white hover:shadow-lg">
-        <div class="mb-4 text-4xl">🌿</div>
+        <div class="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-[var(--primary)] text-white shadow-lg">
+          <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+          </svg>
+        </div>
         <h3 class="mb-3 text-xl font-bold text-[var(--text)]">Gezonde Balans</h3>
         <p class="text-gray-600 leading-relaxed">Overbelasting wordt voorkomen omdat we willen dat het werk geen negatieve impact heeft op je gezondheid of gemoedstoestand.</p>
       </div>
