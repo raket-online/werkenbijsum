@@ -403,8 +403,9 @@
 
 <!-- 1:1 Video Sectie met Antoinette -->
 <section class="py-16 bg-white">
-  <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-8">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="text-center mb-12">
       <div class="inline-flex items-center rounded-full bg-[var(--accent)] px-4 py-2 text-sm font-bold text-white mb-6">
         <svg class="h-4 w-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
           <path d="M8 5v14l11-7z"/>
@@ -419,32 +420,46 @@
       </p>
     </div>
 
-    <div class="relative flex justify-center">
-      <!-- Video Container met 1:1 aspect ratio -->
-      <div class="relative w-full max-w-[480px] rounded-2xl overflow-hidden shadow-2xl">
-        <div class="aspect-square w-full" style="aspect-ratio: 1 / 1;">
-          <iframe
-            src="https://www.youtube.com/embed/8zWu9XJS7nU?rel=0&modestbranding=1&controls=1&iv_load_policy=3&disablekb=1"
-            title="Werken bij SUM Accountants - 1 minuut met Antoinette"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            class="w-full h-full border-0"
-            style="border: none;">
-          </iframe>
+    <!-- Grid layout: video links, tekst rechts -->
+    <div class="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+      <!-- Video Links -->
+      <div class="relative order-2 lg:order-1">
+        <div class="relative w-full max-w-[480px] rounded-2xl overflow-hidden shadow-2xl">
+          <div class="aspect-square w-full" style="aspect-ratio: 1 / 1;">
+            <iframe
+              src="https://www.youtube.com/embed/8zWu9XJS7nU?rel=0&modestbranding=1&controls=1&iv_load_policy=3&disablekb=1"
+              title="Werken bij SUM Accountants - 1 minuut met Antoinette"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              class="w-full h-full border-0"
+              style="border: none;">
+            </iframe>
+          </div>
         </div>
+
+        <!-- Decoratieve elementen -->
+        <div class="absolute -z-10 -top-4 -left-4 w-32 h-32 bg-[var(--accent)]/10 rounded-full blur-2xl"></div>
+        <div class="absolute -z-10 -bottom-4 -right-4 w-24 h-24 bg-[var(--primary)]/10 rounded-full blur-2xl"></div>
       </div>
 
-      <!-- Decoratieve elementen -->
-      <div class="absolute -z-10 -top-4 left-1/2 -translate-x-1/2 w-32 h-32 bg-[var(--accent)]/10 rounded-full blur-2xl"></div>
-      <div class="absolute -z-10 -bottom-4 right-1/4 w-24 h-24 bg-[var(--primary)]/10 rounded-full blur-2xl"></div>
-    </div>
-
-    <!-- Quote onder video -->
-    <div class="mt-8 text-center">
-      <blockquote class="text-xl text-gray-700 font-medium max-w-lg mx-auto leading-relaxed">
-        "Ik wil mensen die blijven, niet die vertrekken."
-      </blockquote>
-      <p class="mt-2 text-sm text-gray-500">— Antoinette, oprichter SUM Accountants</p>
+      <!-- Quote Rechts -->
+      <div class="order-1 lg:order-2">
+        <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-8 lg:p-12">
+          <svg class="h-12 w-12 text-[var(--accent)] mb-6 opacity-50" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+          </svg>
+          <blockquote class="text-2xl text-gray-700 font-medium leading-relaxed mb-6">
+            "Ik wil mensen die blijven, niet die vertrekken."
+          </blockquote>
+          <footer class="flex items-center gap-4">
+            <img src="images/antoinette.jpg" alt="Antoinette" class="h-14 w-14 rounded-full object-cover border-2 border-[var(--accent)]">
+            <div>
+              <cite class="not-italic font-bold text-lg text-[var(--text)]">Antoinette</cite>
+              <p class="text-gray-600 text-sm">Oprichter SUM Accountants</p>
+            </div>
+          </footer>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -825,7 +840,7 @@
 
     <!-- Sticky WhatsApp Button -->
     <a
-      href="https://wa.me/31612345678?text=Hoi!%20Ik%20zou%20graag%20kennis%20willen%20maken%20met%20SUM%20Accountants."
+      href="https://wa.me/31650218660?text=Hoi%20Antoinette%2C%20ik%20zag%20de%20vacature%20en%20graag%20even%20meer%20weten"
       target="_blank"
       rel="noopener noreferrer"
       class="fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-[#25D366] text-white px-5 py-3 rounded-full shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 group"
