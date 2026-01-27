@@ -383,48 +383,29 @@
   </div>
 </section>
 
-<!-- Antoinette Quote Sectie -->
-<section class="py-16 bg-white">
-  <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-    <div class="rounded-2xl bg-gradient-to-br from-[var(--primary)]/5 to-[var(--secondary)]/5 p-10 border-l-4 border-[var(--primary)]">
-      <blockquote class="text-2xl font-medium text-gray-700 italic leading-relaxed mb-6">
-        "Ik vind het belangrijk dat mijn personeel niet overbelast raakt door de hoeveelheid werk. Deadlines zijn er, maar we verdelen het werk zo dat de werkdruk voor iedereen gezond blijft."
-      </blockquote>
-      <footer class="flex items-center gap-4">
-        <img src="images/antoinette.jpg" alt="Antoinette" class="h-14 w-14 rounded-full object-cover border-2 border-[var(--primary)]">
-        <div>
-          <cite class="not-italic font-bold text-xl text-[var(--primary)]">Antoinette</cite>
-          <p class="text-gray-600">Oprichter</p>
-        </div>
-      </footer>
-    </div>
-  </div>
-</section>
-
-<!-- 1:1 Video Sectie met Antoinette -->
+<!-- Antoinette Quote Sectie met Video -->
 <section class="py-16 bg-white">
   <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-    <!-- Header -->
-    <div class="text-center mb-12">
-      <div class="inline-flex items-center rounded-full bg-[var(--accent)] px-4 py-2 text-sm font-bold text-white mb-6">
-        <svg class="h-4 w-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M8 5v14l11-7z"/>
-        </svg>
-        Direct van Antoinette
-      </div>
-      <h2 class="text-3xl font-extrabold text-[var(--text)] sm:text-4xl mb-4">
-        1 minuut met de oprichter
-      </h2>
-      <p class="text-lg text-gray-600 max-w-xl mx-auto">
-        Waarom SUM Accountants anders is dan traditionele kantoren
-      </p>
-    </div>
-
-    <!-- Grid layout: video links, tekst rechts -->
     <div class="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
-      <!-- Video Links -->
-      <div class="relative order-2 lg:order-1">
-        <div class="relative w-full max-w-[480px] rounded-2xl overflow-hidden shadow-2xl">
+      <!-- Quote Links -->
+      <div>
+        <div class="rounded-2xl bg-gradient-to-br from-[var(--primary)]/5 to-[var(--secondary)]/5 p-10 border-l-4 border-[var(--primary)] h-full">
+          <blockquote class="text-2xl font-medium text-gray-700 italic leading-relaxed mb-6">
+            "Ik vind het belangrijk dat mijn personeel niet overbelast raakt door de hoeveelheid werk. Deadlines zijn er, maar we verdelen het werk zo dat de werkdruk voor iedereen gezond blijft."
+          </blockquote>
+          <footer class="flex items-center gap-4">
+            <img src="images/antoinette.jpg" alt="Antoinette" class="h-14 w-14 rounded-full object-cover border-2 border-[var(--primary)]">
+            <div>
+              <cite class="not-italic font-bold text-xl text-[var(--primary)]">Antoinette</cite>
+              <p class="text-gray-600">Oprichter</p>
+            </div>
+          </footer>
+        </div>
+      </div>
+
+      <!-- Video Rechts -->
+      <div class="relative">
+        <div class="relative w-full max-w-[480px] mx-auto rounded-2xl overflow-hidden shadow-2xl">
           <div class="aspect-square w-full" style="aspect-ratio: 1 / 1;">
             <iframe
               src="https://www.youtube.com/embed/8zWu9XJS7nU?rel=0&modestbranding=1&controls=1&iv_load_policy=3&disablekb=1"
@@ -438,26 +419,17 @@
         </div>
 
         <!-- Decoratieve elementen -->
-        <div class="absolute -z-10 -top-4 -left-4 w-32 h-32 bg-[var(--accent)]/10 rounded-full blur-2xl"></div>
-        <div class="absolute -z-10 -bottom-4 -right-4 w-24 h-24 bg-[var(--primary)]/10 rounded-full blur-2xl"></div>
-      </div>
+        <div class="absolute -z-10 -top-4 -right-4 w-32 h-32 bg-[var(--primary)]/10 rounded-full blur-2xl"></div>
+        <div class="absolute -z-10 -bottom-4 -left-4 w-24 h-24 bg-[var(--secondary)]/10 rounded-full blur-2xl"></div>
 
-      <!-- Quote Rechts -->
-      <div class="order-1 lg:order-2">
-        <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-8 lg:p-12">
-          <svg class="h-12 w-12 text-[var(--accent)] mb-6 opacity-50" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-          </svg>
-          <blockquote class="text-2xl text-gray-700 font-medium leading-relaxed mb-6">
-            "Ik wil mensen die blijven, niet die vertrekken."
-          </blockquote>
-          <footer class="flex items-center gap-4">
-            <img src="images/antoinette.jpg" alt="Antoinette" class="h-14 w-14 rounded-full object-cover border-2 border-[var(--accent)]">
-            <div>
-              <cite class="not-italic font-bold text-lg text-[var(--text)]">Antoinette</cite>
-              <p class="text-gray-600 text-sm">Oprichter SUM Accountants</p>
-            </div>
-          </footer>
+        <!-- Badge onder video -->
+        <div class="text-center mt-4">
+          <span class="inline-flex items-center rounded-full bg-[var(--accent)] px-4 py-2 text-sm font-bold text-white">
+            <svg class="h-4 w-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+            1 minuut met Antoinette
+          </span>
         </div>
       </div>
     </div>
